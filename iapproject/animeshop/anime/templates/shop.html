@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryoiki Tenkai</title>
+    <link rel="stylesheet" href="{% static 'anime.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <style>
+            body {
+                font-family: 'Poppins';font-size: 22px;
+            }
+        </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="{% static 'image/8.jpeg'%}">
+        <h1>Ryoiki Tenkai</h1><br>
+        <h4>YOUR ONE STOP ONLINE SHOP FOR ANIME SHIRTS</h4>
+        <nav class="navbar">
+            <ul class="navbar">
+                <li><a href="/anime">HOME</a></li>
+                <li><a href="/anime/shop">SHOP</a></li>
+                <li><a href="/anime/login">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="product-container">
+        <img src="{% static 'image/5.jpeg'%}" alt="Product 1" class="product-image">
+        <div class="product-name">One Piece</div>
+        <div class="product-price">$19.99</div>
+        <button class="add-to-cart-btn" onclick="addToCart(19.99)">Add to Cart</button>
+    </div>
+    <div class="product-container">
+        <img src="{% static 'image/3.jpeg'%}" alt="Product 2" class="product-image">
+        <div class="product-name">Attack On Titan</div>
+        <div class="product-price">$24.99</div>
+        <button class="add-to-cart-btn" onclick="addToCart(24.99)">Add to Cart</button>
+    </div>
+    <div class="product-container">
+        <img src="{% static 'image/4.jpeg'%}" alt="Product 1" class="product-image">
+        <div class="product-name">Demon Slayer</div>
+        <div class="product-price">$14.99</div>
+        <button class="add-to-cart-btn" onclick="addToCart(14.99)">Add to Cart</button>
+    </div>
+    <div class="product-container">
+        <img src="{% static 'image/7.jpeg'%}" alt="Product 2" class="product-image">
+        <div class="product-name">Jujutsu Kaisen</div>
+        <div class="product-price">$22.99</div>
+        <button class="add-to-cart-btn" onclick="addToCart(22.99)">Add to Cart</button>
+    </div>
+    <div class="product-container">
+        <img src="{% static 'image/2.jpeg'%}" alt="Product 1" class="product-image">
+        <div class="product-name">One Punch Man</div>
+        <div class="product-price">$20.00</div>
+        <button class="add-to-cart-btn" onclick="addToCart(20.00)">Add to Cart</button>
+    </div>
+    <div class="product-container">
+        <img src="{% static 'image/6.jpeg'%}" alt="Product 2" class="product-image">
+        <div class="product-name">My Hero Academia</div>
+        <div class="product-price">$25.46</div>
+        <button class="add-to-cart-btn" onclick="addToCart(25.46)">Add to Cart</button>
+    </div>
+    <div class="total-display" id="totalDisplay">
+        Total Items: <span id="totalItems">0</span> | Total Amount: $<span id="totalAmount">0.00</span>
+    </div>
+
+    <script>
+        let totalItems = 0;
+        let totalAmount = 0;
+
+        function addToCart(amount) {
+            totalItems++;
+            totalAmount += amount;
+
+            // Update the total display
+            document.getElementById('totalItems').innerText = totalItems;
+            document.getElementById('totalAmount').innerText = totalAmount.toFixed(2);
+        }
+    </script>
+</body>
+</html>

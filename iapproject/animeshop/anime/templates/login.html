@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryoiki Tenkai</title>
+    <link rel="stylesheet" href="{% static 'anime.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <style>
+            body {
+                font-family: 'Poppins';font-size: 22px;
+            }
+        </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="{% static 'image/8.jpeg'%}">
+        <h1>Ryoiki Tenkai</h1><br>
+        <h4>YOUR ONE STOP ONLINE SHOP FOR ANIME SHIRTS</h4>
+        <nav class="navbar">
+            <ul class="navbar">
+                <li><a href="/anime">HOME</a></li>
+                <li><a href="/anime/shop">SHOP</a></li>
+                <li><a href="/anime/login">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside id="login-aside">
+            <h2>Login</h2>
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            
+                <input type="submit" value="Login">
+            </form>
+        </aside>
+        <section id="login-section">
+            <img src="{% static 'image/1.jpeg'%}">
+        </section>
+        <article id="login-article">
+            <h2>Conclusion</h2>
+            <p>The design choices for the Ryoiki Tenkai website have been meticulously
+                crafted to resonate with the vibrant and dynamic world of anime. By embracing
+                consistent branding principles, such as integrating an anime character logo and
+                aligning the tagline "YOUR ONE STOP ONLINE FOR ANIME SHIRTS'' with
+                the brand name, we aim to create a visually cohesive and memorable identity.
+                The user-friendly navigation system, inspired by manga reading direction,
+                coupled with anime-themed icons, ensures an intuitive and engaging experience
+                for our target audience of anime enthusiasts. The shop page's grid layout,
+                featuring high-quality character artwork and an anime-inspired color palette, not
+                only enhances the visual appeal but also provides a familiar browsing
+                experience akin to reading manga. The login page, with its user-centric form
+                and strategically placed conclusion, seeks to streamline the user journey while
+                maintaining thematic consistency. Through these design choices, we endeavor
+                to immerse visitors in an authentic anime-inspired atmosphere, fostering a
+                connection with our brand and making Ryoiki Tenkai the ultimate online
+                destination for anime shirt enthusiasts.</p>
+        </article>
+    </main>
+    <div class="foot">
+        <a href=""><img src="{% static 'image/10.jpeg'%}" height="30"></a>
+        <a href=""><img src="{% static 'image/11.jpeg'%}" height="30"></a>
+        <a href=""><img src="{% static 'image/9.jpeg'%}" height="30"></a>
+        
+    </div>
+
+</body>
+</html>

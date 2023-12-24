@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryoiki Tenkai</title>
+    <link rel="stylesheet" href="{% static 'anime.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <style>
+            body {
+                font-family: 'Poppins';font-size: 22px;
+            }
+        </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="{% static 'image/8.jpeg'%}">
+        <h1>Ryoiki Tenkai</h1><br>
+        <h4>YOUR ONE STOP ONLINE SHOP FOR ANIME SHIRTS</h4>
+        <nav class="navbar">
+            <ul class="navbar">
+                <li><a href="/anime">HOME</a></li>
+                <li><a href="/anime/shop">SHOP</a></li>
+                <li><a href="/anime/login">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside id="home-aside">
+            <h2>Introduction</h2>
+            <p>The website aims to
+                provide a user-friendly interface, seamless shopping experience, and a diverse
+                collection of high-quality anime-themed apparel for anime enthusiasts and fans
+                worldwide.
+                The primary objective of this project is to design and develop an engaging,
+                visually appealing, and functional e-commerce platform specifically tailored for
+                the sale of anime shirts. The website will feature a wide range of designs, sizes,
+                and styles to cater to the diverse preferences of anime lovers and fashion
+                enthusiasts.</p>
+        </aside>
+        <section id="home-section">
+            <h2>Goals</h2>
+            <p><ul>
+                <li>CONSISTENT BRANDING</li>
+                <li>USER FRIENDLY NAVIGATION</li>
+                <li>ENGAGING HOME PAGE</li>
+                <li>VISUAL APPEAL IN SHOP PAGE</li>
+                <li>ANIME-INSPIRED VISUAL ELEMENTS</li>
+            </ul></p>
+        </section>
+        <article id="home-article">
+            <h2>Target Audience</h2>
+            <p>The target audience for the anime shirt e-commerce website includes:
+                <Ul>
+                    <li>Anime Fans: People who are passionate about anime culture, characters,
+                        and stories who seek unique and exclusive anime-themed apparel</li>
+                    <li>
+                        Cosplayers: Fans who engage in cosplay activities and require specific
+anime-themed shirts to complement their costumes.
+                    </li>
+                    <li>
+                        Collectors: People interested in collecting limited-edition or rare anime
+shirt designs as part of their merchandise collection.
+                    </li>
+                    <li>
+                        Gift Shoppers: Individuals looking to purchase anime shirts as gifts for
+friends, family, or colleagues who share an interest in anime.
+                    </li>
+                </Ul>
+            </p>
+        </article>
+    </main>
+    <div class="foot">
+        <a href=""><img src="{% static 'image/10.jpeg'%}" height="30"></a>
+        <a href=""><img src="{% static 'image/11.jpeg'%}" height="30"></a>
+        <a href=""><img src="{% static 'image/9.jpeg'%}" height="30"></a>
+        
+    </div>
+
+</body>
+</html>
